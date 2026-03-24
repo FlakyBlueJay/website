@@ -1,0 +1,14 @@
+---
+title: 'Release: Tag Hierarchy Manager'
+description: 'This new version introduces improved mobile navigation (via sticky table of contents) and the concept of "subposts."'
+date: 2026-01-26
+tags: ['Release', 'Projects']
+image: './banner.png'
+---
+So, I finally released version 2.0 of the Tag Hierarchy Manager. You can go grab it on my GitHub now! https://github.com/FlakyBlueJay/TagHierarchyManager
+
+For context, this is an application I wrote to manage the Rate Your Music hierarchy template for MusicBee, which allows you to define a hierarchical template in a text file. With how complex RYM’s tree is, it was worth it for me to write an app for it so it was easy for me to manage. Initially it was written in Python using PyQt, and is still a Qt5 app because at the time, I couldn’t be arsed to port it to Qt6, and the code was a bit of a mess.
+
+I decided to port it to .NET/C# instead since I felt C# was a better language for me, starting with Terminal.Gui, and then eventually, Avalonia. This was what made the MVVM (Model-View-ViewModel) architecture for software click for me - and frankly, if you’re using Avalonia you need to learn it if your app gets to a certain size, since it enforces it quite strictly. I still sometimes get the View and ViewModel a bit blurred with the code-behind, but even then it’s made the code a lot more manageable.
+
+Maybe I’ll port this to Qt/QML once Qt brings out their official .NET bridge, but for now Avalonia is perfectly cromulent for what I want. And it supports Linux, if I want to go back to it (albeit using XWayland, though Wayland support is part of the pipeline. Frankly, I don’t care as long as the app doesn’t freak out.)
